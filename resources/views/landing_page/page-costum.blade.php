@@ -4,6 +4,7 @@
 {{-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" href="asset/css/styles.css">
+<!-- <link id="pagestyle" href="asset/admin/css/soft-ui-dashboard.  css?v=1.0.3" rel="stylesheet" /> -->
 <section id="home" class="section-home" style="overflow: hidden;">
  
     <section class="main-banner">
@@ -348,18 +349,29 @@
                  }
                  }
                 /* new */
+                .input-bar {
+                    font-size: 15px!important;
+                    border-radius: 7px!important;
+                }
+
+                .input-bar,
+                .input-bar::-webkit-input-placeholder {
+                    font-size: 15px;
+                    padding-right:10rem;
+                }
             </style>
             
         <div class="main-banner__cekresi">
             <div class="main-banner__cekresi--list cek-lacak">
-                <a class="form"  href="">
+                <form class="form">
                     <i><img src="{{asset('asset/images/material/ico-lacak.svg')}}"></i> 
                     {{-- <i><img src="{{asset('asset/images/material/ico-lacak.svg')}}"></i>  --}}
-                    <div class="input-box ip" style="margin-top: 10px">
+                    <div class="input-box">
                         <label class="ip">Lacak Pesanan</label>
-                        <input type="text" placeholder="Masukan nomor pesanan">
-                       </div>
-                </a>
+                        <input class="input-bar" type="text" placeholder="Masukan nomor pesanan">
+                        <a class="button-search button-search-resi"></a>
+                    </div>
+                </form>
             </div>
             <div class="main-banner__cekresi--list cek-tarif">
                
@@ -368,8 +380,8 @@
                     {{-- <i><img src="{{asset('asset/images/material/ico-cek.svg')}}"></i> --}}
                     
                     <div class="input-box">
-                        <label>CEK HARGA</label>
-                        <input type="text" placeholder="Masukan data pesanan">
+                        <label>Cek Harga</label>
+                        <input class="input-bar" type="text" placeholder="Masukan data pesanan">
                         <a class="button-search button-search-resi"></a>
                     </div>
                 </form>
@@ -415,44 +427,45 @@
                 <div id="carouselExample" class="carousel slide w-100 h-carousel slider" data-ride="carousel">
                     <div class="carousel-inner"> 
                         <div class="carousel-item img-carousel active">
-                            <img src="{{asset('asset/images/swiss.jpg')}}" class="d-block  w-100 img-fluid"  alt="swiss"> 
+                            <img src="{{asset('asset/images/swiss.jpg')}}" class="d-block w-100 img-fluid"  alt="swiss"> 
                         </div>
                         <div class="carousel-item">
-                            <img src=" {{asset('asset/images/top.jpg')}}" class="d-block w-100"   alt="top"> 
+                            <img src=" {{asset('asset/images/top.jpg')}}" class="d-block w-100" alt="top"> 
                         </div>
                         <div class="carousel-item"> 
-                            <video id="video1" class="d-block w-50 csabout" controls autoplay muted> 
+                            <video id="video1" class="d-block w-100 csabout" controls autoplay muted> 
                                 <source src="{{asset('asset/images/video1.mp4')}}" type="video/mp4"> 
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="carousel-item" >
                             <!-- Gunakan tag video untuk video -->
-                            <video id="video2" class="d-block w-50 csabout" controls autoplay muted>
+                            <video id="video2" class="d-block w-100 csabout" controls autoplay muted>
                                 <!-- Sediakan sumber video -->
                                 <source src="{{asset('asset/images/video2.mp4')}}" type="video/mp4">
                                 
                                 Your browser does not support the video tag.
                             </video>
                         </div>
+                        <button class="carousel-control-prev center-vertical w-9" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next center-vertical w-9" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    
                 </div>
             </div>
             <div class="col-lg-6 teks" style="font-family: Montheavy; color: rgba(0, 0, 0, 0.8);">
                 <p class=" text-justify mb-4 text-about">RATHEN merupakan sportwears brand yang berasal dari Bogor, Indonesia. Memulai industri sportwears pada tahun 2014 dengan berfokus pada pembuatan custom jersey sepakbola atau futsal. Berbagai jenis tim, baik dari level korporasi, akademisi, komunitas sepakbola, hingga tim liga futsal profesional telah menjadi bagian perjalanan manis rathen di dunia industri sportwear.</p>
-                <p class=" text-justify mb-4 text-about">Hingga akhirnya, Pada tahun 2016, RATHEN dipercaya menjadi penyedia jersey latihan tim nasional Futsal Indonesia. 
+                <p class=" text-justify mb-4 text-about font-light">Hingga akhirnya, Pada tahun 2016, RATHEN dipercaya menjadi penyedia jersey latihan tim nasional Futsal Indonesia. 
                 </p>
-                <p class=" text-justify mb-4 text-about">Tahun 2020 menjadi langkah awal RATHEN menembus pasar Internasional. Dimulai dari negara di kawasan Asia seperti Timor Leste, bergerak perlahan ke Malaysia, hingga akhirnya Korea Selatan.</p>
-                <p class=" text-justify mb-4 text-about">Tidak hanya puas di level Asia, Rathen melanjutkan langkah awal penetrasi ke pasar Eropa melalui negara Swiss hingga dapat memperluas jangkauan ke benua Amerika, tepatnya negara USA. </p>
-                <p class=" text-justify mb-4 text-about">Pasar internasional memiliki standar mutu produk yang tinggi.
+                <p class=" text-justify mb-4 text-about font-light">Tahun 2020 menjadi langkah awal RATHEN menembus pasar Internasional. Dimulai dari negara di kawasan Asia seperti Timor Leste, bergerak perlahan ke Malaysia, hingga akhirnya Korea Selatan.</p>
+                <p class=" text-justify mb-4 text-about font-light">Tidak hanya puas di level Asia, Rathen melanjutkan langkah awal penetrasi ke pasar Eropa melalui negara Swiss hingga dapat memperluas jangkauan ke benua Amerika, tepatnya negara USA. </p>
+                <p class=" text-justify mb-4 text-about font-light">Pasar internasional memiliki standar mutu produk yang tinggi.
                     Kami, RATHEN Indonesia, dengan bangga dapat memenuhi persyaratan standar mutu tersebut.
                     </p>
             </div>
@@ -516,24 +529,24 @@
         </div>
     </section>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
+        <div class="row center-hori">
+            <div class="col-lg-3 m-4">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CztGkRBv1m2/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#000; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
             </div> 
             
-            <div class="col-lg-4">
+            <div class="col-lg-3 m-4">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Czse_c8vlLo/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#000; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
             </div> 
-            <div class="col-lg-4">
+            <div class="col-lg-3 m-4">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CzsEOnUvMs_/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#000; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
             </div> 
-            <div class="col-lg-4">
+            <div class="col-lg-3 m-4">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CzqmUt9P5Ks/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#000; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
             </div> 
-            <div class="col-lg-4">
+            <div class="col-lg-3 m-4">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CzoAeKzvian/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#000; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
             </div> 
-            <div class="col-lg-4">
+            <div class="col-lg-3 m-4">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CznTMlcP332/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#000; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
             </div> 
         </div>
@@ -909,7 +922,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         .img_location{
             width: 100%;
-            height: 100%;
+            height: 512px;
         }.l-carousel{
             width: 100%;
             height: 100%;
@@ -922,13 +935,13 @@ document.addEventListener('DOMContentLoaded', function () {
             LOCATION
         </div>
     <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-6 card_location mt-4">
+        <div class="row center-hori">
+            <div class="col-lg-5 card_location m-4">
                 <div class="img_location ">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4343833806684!2d106.77431907418564!3d-6.5928088934009095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c57a439b19c9%3A0x4a05cc1ee48848ba!2sRATHEN%20Store%20-%20Sportwears%20Outlet!5e0!3m2!1sid!2sid!4v1700127350226!5m2!1sid!2sid" allowfullscreen class="img_location" style="500px"></iframe>
                 </div>
             </div>
-            <div class="col-lg-6 mt-4">
+            <div class="col-lg-5 m-4">
         
                 <div id="carouselExample" class="carousel slide w-100 h-carousel slide"  data-ride="carousel">
                     <div class="carousel-inner ">
@@ -956,7 +969,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div>
     <div class="container text-center">
-        <div class="row mt-4">
+        <div class="row m-4">
             <div class="col-lg-12" >
                 <p class="store">RATHEN STORE </p>
                 <p class="addres"> Ruko Sentra Gunungbatu<br>Jl. Mayjen Ishak Djuarsa no. 167B<br>Bogor 16118 </p>
@@ -978,16 +991,16 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
             <div class="row sosmed">
                 <div class="col-lg-2"></div>
-                    <a href="https://wa.me/6289611081988?text=halo%20RATHEN..%20Saya%20ingin%20membuat%20custom%20jersey" target="_blank" class="btn-mid"><img src="asset/images/wa.png" class="icon" width="50%" alt="wa"><h5>whatsapp</h5></a>
-                    <a href="https://shopee.co.id/rathen.id" target="_blank" class="btn-mid"><img src="asset/images/SHOPEE.png" class="icon" width="50%" alt="wa"><h5>shopee</h5></a>
-                    <a href="https://www.tokopedia.com/rathenid" target="_blank" class="btn-mid"><img src="asset/images/toko.png" class="icon" width="50%" alt="wa"><h5>tokopedia</h5></a>
+                    <a href="https://wa.me/6289611081988?text=halo%20RATHEN..%20Saya%20ingin%20membuat%20custom%20jersey" target="_blank" class="btn-mid"><img src="asset/images/whatsapp_new.png" class="icon" width="50%" alt="wa"><h5>Whatsapp</h5></a>
+                    <a href="https://shopee.co.id/rathen.id" target="_blank" class="btn-mid"><img src="asset/images/SHOPEE.png" class="icon" width="50%" alt="wa"><h5>Shopee</h5></a>
+                    <a href="https://www.tokopedia.com/rathenid" target="_blank" class="btn-mid"><img src="asset/images/tokped_new.png" class="icon" width="50%" alt="wa"><h5>Tokopedia</h5></a>
                 <div class="col-lg-2"></div>
             </div>
             <div class="row sosmed">
                 <div class="container-sosmed">
                     <a href="https://www.instagram.com/rathen.apparel/" target="_blank" ><img src="asset/images/ig-biru.png" class="btn-sosmed" alt="wa"></a>
                     <a href="mailto:rathen.apparel@gmail.com" target="_blank" class="emai"><img src="asset/images/mail.png" class="btn-sosmed" alt="wa"></a>
-                    <p class="footer">copyright &copy; rathen indonesia 2023</p>
+                    <p class="footer">copyright &copy; rathen indonesia 2024</p>
                 </div>
             </div>
     </div>
